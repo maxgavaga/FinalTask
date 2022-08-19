@@ -1,7 +1,7 @@
 ﻿string CreateRandomString(int MinStrLen, int MaxStrLen)
 {
     Random random = new Random();
-    string symbols = "abcdefghijklmnopqrstuwxy0123456789";
+    string symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     int SymbolsLen = random.Next(MinStrLen, MaxStrLen);
     char[] strSymbols = new char[SymbolsLen];
 
@@ -27,7 +27,7 @@ string[] StringCheckerForThreeSymb(string[] words)
 
     for (int i = 0; i < words.Length; i++)
     {
-        if (words[i].Length > 3)
+        if (words[i].Length >= 4)
         {
             words[i] = String.Empty;
         }
